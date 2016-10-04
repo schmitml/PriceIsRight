@@ -9,12 +9,23 @@ import java.util.concurrent.ThreadLocalRandom;
  * MA381
  */
 public class Main {
-    public static int NUMBER_OF_TRIALS = 10000000;
+    private static int NUMBER_OF_TRIALS = 1000000;
 
     public static void main(String[] args) {
+        System.out.println("Two Player Game");
         TwoPlayerGame g1 = new TwoPlayerGame();
-        ArrayList<Double> winPercentages = g1.runGame(NUMBER_OF_TRIALS);
+        determineBest(g1.runGame(NUMBER_OF_TRIALS));
 
+        System.out.println("Three Player Game");
+        ThreePlayerGame g2 = new ThreePlayerGame();
+        determineBest(g2.runGame(NUMBER_OF_TRIALS));
+
+        System.out.println("Four Player Game");
+        FourPlayerGame g3 = new FourPlayerGame();
+        determineBest(g3.runGame(NUMBER_OF_TRIALS));
+    }
+
+    private static void determineBest(ArrayList<Double> winPercentages){
         int bestStop = 0;
         double bestPercent = winPercentages.get(0);
         for(int i = 0; i < 21; i++){
@@ -22,11 +33,10 @@ public class Main {
                 bestPercent = winPercentages.get(i);
                 bestStop = i;
             }
-            System.out.println("Stop = " + i + ": " + winPercentages.get(i));
+            //System.out.println("Stop = " + i + ": " + winPercentages.get(i));
         }
-        System.out.println("\nBest stop " + bestStop +" with " + bestPercent);
+        System.out.println("Best stop " + bestStop +" with " + bestPercent + "\n");
     }
-
 
     /*****************UTIL*****************/
     public static int spinWheel(){

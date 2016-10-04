@@ -3,14 +3,9 @@ package edu.schmitml;
 import java.util.ArrayList;
 
 /**
- * Class that replicates a two person "Big Wheel" game. Attempts to find the optimal stopping value for playerSpins one.
- *
- * Created by Marc Schmitt
- * schmitml@rose-hulman.edu
- * MA381
+ * Created by marcs on 10/4/2016.
  */
-public class TwoPlayerGame {
-
+public class FourPlayerGame {
     public ArrayList<Double> runGame(int numberOfTrials){
         ArrayList<Double> winPercentage = new ArrayList<>();
 
@@ -39,20 +34,26 @@ public class TwoPlayerGame {
         }
         int playerTwoScore = playerSpins(playerOneScore);
         if(playerTwoScore > 20){
-            return 1;
+            playerTwoScore = -1; // Player two lost, set his score such that it wont accidentally win
         }
 
-        if(playerOneScore >= playerTwoScore){ // Tie goes to player one
+        int playerThreeScore = playerSpins(playerTwoScore);
+        if(playerThreeScore > 20){
+            playerThreeScore = -1;
+        }
+
+        int playerFourScore = playerSpins(playerThreeScore);
+        if(playerFourScore > 20){
+            playerFourScore = -1;
+        }
+
+        if(playerOneScore >= playerTwoScore && playerOneScore >= playerThreeScore && playerOneScore >= playerFourScore){ // Tie goes to player one
             return 1;
         }
         return 0;
     }
 
     /**
-     * For a two person game each playerSpins has a similar strategy. The difference between the two players is where
-     * they get their stopping number from. Player one has to determine for themselves, which we simulate by trying
-     * every option, whereas playerSpins two has their stopping number determined by playerSpins one's score.
-     *
      * @param stop - the number the playerSpins will stop at
      * @return - the playerSpins's score
      */
@@ -65,5 +66,4 @@ public class TwoPlayerGame {
 
         return spin;
     }
-
 }

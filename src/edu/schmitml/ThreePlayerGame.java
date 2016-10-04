@@ -3,13 +3,13 @@ package edu.schmitml;
 import java.util.ArrayList;
 
 /**
- * Class that replicates a two person "Big Wheel" game. Attempts to find the optimal stopping value for playerSpins one.
+ * Class that replicates a three person "Big Wheel" game. Attempts to find the optimal stopping value for playerSpins one.
  *
  * Created by Marc Schmitt
  * schmitml@rose-hulman.edu
  * MA381
  */
-public class TwoPlayerGame {
+public class ThreePlayerGame {
 
     public ArrayList<Double> runGame(int numberOfTrials){
         ArrayList<Double> winPercentage = new ArrayList<>();
@@ -32,27 +32,28 @@ public class TwoPlayerGame {
      * @return - +1 if player one won
      *           0 if player one lost
      */
-    private int playGame(int stop) {
+    public int playGame(int stop) {
         int playerOneScore = playerSpins(stop);
         if(playerOneScore > 20){
             return 0;
         }
         int playerTwoScore = playerSpins(playerOneScore);
         if(playerTwoScore > 20){
+            playerTwoScore = -1; // Player two lost, set his score such that it wont accidentally win
+        }
+
+        int playerThreeScore = playerSpins(playerTwoScore);
+        if(playerThreeScore > 20 && playerTwoScore > 20){
             return 1;
         }
 
-        if(playerOneScore >= playerTwoScore){ // Tie goes to player one
+        if(playerOneScore >= playerTwoScore && playerOneScore >= playerThreeScore){ // Tie goes to player one
             return 1;
         }
         return 0;
     }
 
     /**
-     * For a two person game each playerSpins has a similar strategy. The difference between the two players is where
-     * they get their stopping number from. Player one has to determine for themselves, which we simulate by trying
-     * every option, whereas playerSpins two has their stopping number determined by playerSpins one's score.
-     *
      * @param stop - the number the playerSpins will stop at
      * @return - the playerSpins's score
      */
@@ -65,5 +66,4 @@ public class TwoPlayerGame {
 
         return spin;
     }
-
 }
