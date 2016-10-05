@@ -3,7 +3,7 @@ package edu.schmitml;
 import java.util.ArrayList;
 
 /**
- * Class that replicates a two person "Big Wheel" game. Attempts to find the optimal stopping value for playerSpins one.
+ * Class that replicates a two person "Big Wheel" game. Attempts to find the optimal stopping value for player one.
  *
  * Created by Marc Schmitt
  * schmitml@rose-hulman.edu

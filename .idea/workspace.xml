@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68945f23-69e0-4800-9e49-0fb3afe2c26e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PriceIsRight/edu/schmitml/FourPlayerGame$1.class" afterPath="$PROJECT_DIR$/out/production/PriceIsRight/edu/schmitml/FourPlayerGame$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PriceIsRight/edu/schmitml/FourPlayerGame.class" afterPath="$PROJECT_DIR$/out/production/PriceIsRight/edu/schmitml/FourPlayerGame.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PriceIsRight/edu/schmitml/Main.class" afterPath="$PROJECT_DIR$/out/production/PriceIsRight/edu/schmitml/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PriceIsRight/edu/schmitml/ThreePlayerGame$1.class" afterPath="$PROJECT_DIR$/out/production/PriceIsRight/edu/schmitml/ThreePlayerGame$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PriceIsRight/edu/schmitml/ThreePlayerGame.class" afterPath="$PROJECT_DIR$/out/production/PriceIsRight/edu/schmitml/ThreePlayerGame.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PriceIsRight/edu/schmitml/TwoPlayerGame.class" afterPath="$PROJECT_DIR$/out/production/PriceIsRight/edu/schmitml/TwoPlayerGame.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/schmitml/FourPlayerGame.java" afterPath="$PROJECT_DIR$/src/edu/schmitml/FourPlayerGame.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/schmitml/Main.java" afterPath="$PROJECT_DIR$/src/edu/schmitml/Main.java" />
@@ -35,8 +36,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/schmitml/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="363">
+              <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -47,18 +48,18 @@
       <file leaf-file-name="TwoPlayerGame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/schmitml/TwoPlayerGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1502">
-              <caret line="61" column="18" selection-start-line="61" selection-start-column="18" selection-end-line="61" selection-end-column="18" />
+            <state relative-caret-position="-544">
+              <caret line="5" column="110" selection-start-line="5" selection-start-column="110" selection-end-line="5" selection-end-column="110" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ThreePlayerGame.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ThreePlayerGame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/schmitml/ThreePlayerGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1485">
-              <caret line="18" column="81" selection-start-line="18" selection-start-column="81" selection-end-line="18" selection-end-column="81" />
+            <state relative-caret-position="479">
+              <caret line="108" column="30" selection-start-line="108" selection-start-column="30" selection-end-line="108" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -66,13 +67,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FourPlayerGame.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FourPlayerGame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/edu/schmitml/FourPlayerGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1216">
-              <caret line="67" column="18" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
+            <state relative-caret-position="4406">
+              <caret line="134" column="18" selection-start-line="134" selection-start-column="18" selection-end-line="134" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1950#1951#0" expanded="true" />
+                <element signature="e#1996#1997#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -99,10 +102,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/edu/schmitml/Game.java" />
-        <option value="$PROJECT_DIR$/src/edu/schmitml/Main.java" />
         <option value="$PROJECT_DIR$/src/edu/schmitml/TwoPlayerGame.java" />
-        <option value="$PROJECT_DIR$/src/edu/schmitml/FourPlayerGame.java" />
         <option value="$PROJECT_DIR$/src/edu/schmitml/ThreePlayerGame.java" />
+        <option value="$PROJECT_DIR$/src/edu/schmitml/FourPlayerGame.java" />
+        <option value="$PROJECT_DIR$/src/edu/schmitml/Main.java" />
       </list>
     </option>
   </component>
@@ -626,12 +629,12 @@
       <updated>1475593218884</updated>
       <workItem from="1475593221588" duration="12280000" />
       <workItem from="1475632039995" duration="5545000" />
-      <workItem from="1475642180357" duration="2869000" />
+      <workItem from="1475642180357" duration="28856000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20694000" />
+    <option name="totallyTimeSpent" value="46681000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="3026" height="1946" extended-state="6" />
@@ -639,7 +642,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -720,6 +723,8 @@
           <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1950#1951#0" expanded="true" />
+            <element signature="e#1996#1997#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -758,25 +763,17 @@
           <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1950#1951#0" expanded="true" />
+            <element signature="e#1996#1997#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/schmitml/Game.java" />
-    <entry file="file://$PROJECT_DIR$/src/edu/schmitml/FourPlayerGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1216">
-          <caret line="67" column="18" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/schmitml/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="363">
+          <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -785,18 +782,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/schmitml/TwoPlayerGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1502">
-          <caret line="61" column="18" selection-start-line="61" selection-start-column="18" selection-end-line="61" selection-end-column="18" />
+        <state relative-caret-position="-544">
+          <caret line="5" column="110" selection-start-line="5" selection-start-column="110" selection-end-line="5" selection-end-column="110" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/schmitml/ThreePlayerGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1485">
-          <caret line="18" column="81" selection-start-line="18" selection-start-column="81" selection-end-line="18" selection-end-column="81" />
+        <state relative-caret-position="479">
+          <caret line="108" column="30" selection-start-line="108" selection-start-column="30" selection-end-line="108" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/schmitml/FourPlayerGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4406">
+          <caret line="134" column="18" selection-start-line="134" selection-start-column="18" selection-end-line="134" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1950#1951#0" expanded="true" />
+            <element signature="e#1996#1997#0" expanded="true" />
           </folding>
         </state>
       </provider>

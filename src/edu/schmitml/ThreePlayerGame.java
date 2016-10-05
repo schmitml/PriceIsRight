@@ -5,14 +5,18 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /**
- * Class that replicates a three person "Big Wheel" game. Attempts to find the optimal stopping value for playerSpins one.
+ * Class that replicates a three person "Big Wheel" game. Attempts to find the optimal stopping value for player one.
  *
  * Created by Marc Schmitt
  * schmitml@rose-hulman.edu
  * MA381
  */
 public class ThreePlayerGame {
+    private int bestTwoPlayerStop;
 
+    public ThreePlayerGame(int bestTwoPlayer){
+        bestTwoPlayerStop = bestTwoPlayer; // Used for the special two player spin
+    }
     /**
      * Runs the specified number of trials for each of the possible Q values (0-20).
      * @param numberOfTrials
@@ -21,12 +25,12 @@ public class ThreePlayerGame {
     public ArrayList<Double> runGame(int numberOfTrials){
         ArrayList<Double> winPercentage = new ArrayList<>();
 
-        for(int j = 0; j < 21; j++){
+        for(int j = 0; j < 21; j++){ // Loop through each possible stopping value
             double wins = 0;
-            for(int i = 0; i < numberOfTrials; i++){ // Run 100000 trials
+            for(int i = 0; i < numberOfTrials; i++){ // Run 1000000 trials
                 wins += playGame(j); // A trial is for one stopping number
             }
-            winPercentage.add(j, wins/numberOfTrials);
+            winPercentage.add(j, wins/numberOfTrials); // Add the percentage of wins for this stopping number
         }
 
         return winPercentage;
@@ -80,6 +84,9 @@ public class ThreePlayerGame {
     }
 
     /**
+     * The general spin strategy for a player, where stop is either assigned for player one or is the current highest
+     * score that this player must beat to win.
+     *
      * @param stop - the number the player will stop spinning at
      * @return - the player's score
      */
@@ -94,6 +101,9 @@ public class ThreePlayerGame {
     }
 
     /**
+     * The spin strategy for a two player game. Uses the optimal stopping strategy for a two person game as a limit
+     * for a second spin. This method is designed for a special case where player two beats player one's score on their
+     * first spin. This is the "middle" strategy.
      *
      * @param stop - the number the player will stop spinning at
      * @return - the player's score
@@ -101,7 +111,7 @@ public class ThreePlayerGame {
     private int playerTwoSpecial(int stop){
         int spin = Main.spinWheel();
 
-        if((spin > stop && spin < 10) || spin <= stop){
+        if((spin > stop && spin < bestTwoPlayerStop) || spin < stop){
             spin += Main.spinWheel();
         }
 
