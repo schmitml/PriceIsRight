@@ -37,7 +37,7 @@ public class TwoPlayerGame {
         if(playerOneScore > 20){
             return 0;
         }
-        int playerTwoScore = playerSpins(playerOneScore);
+        int playerTwoScore = playerSpins(playerOneScore+1);
         if(playerTwoScore > 20){
             return 1;
         }
@@ -59,7 +59,7 @@ public class TwoPlayerGame {
     private int playerSpins(int stop){
         int spin = Main.spinWheel(); // Spin the wheel
 
-        if (spin <= stop){
+        if (spin < stop){
             spin += Main.spinWheel();
         }
 

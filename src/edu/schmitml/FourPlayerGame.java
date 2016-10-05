@@ -1,6 +1,8 @@
 package edu.schmitml;
 
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.PriorityQueue;
 
 /**
  * Created by marcs on 10/4/2016.
@@ -28,26 +30,29 @@ public class FourPlayerGame {
      *           0 if player one lost
      */
     private int playGame(int stop) {
+        PriorityQueue<Integer> max = new PriorityQueue<>(new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return o2 - o1;
+            }
+        });
+
         int playerOneScore = playerSpins(stop);
         if(playerOneScore > 20){
             return 0;
         }
-        int playerTwoScore = playerSpins(playerOneScore);
-        if(playerTwoScore > 20){
-            playerTwoScore = -1; // Player two lost, set his score such that it wont accidentally win
+        max.offer(playerOneScore);
+
+        int score;
+        for(int i = 0; i < 3; i++){
+            score = playerSpins(max.peek());
+            if(score > 20){
+                score = -1;
+            }
+            max.offer(score);
         }
 
-        int playerThreeScore = playerSpins(playerTwoScore);
-        if(playerThreeScore > 20){
-            playerThreeScore = -1;
-        }
-
-        int playerFourScore = playerSpins(playerThreeScore);
-        if(playerFourScore > 20){
-            playerFourScore = -1;
-        }
-
-        if(playerOneScore >= playerTwoScore && playerOneScore >= playerThreeScore && playerOneScore >= playerFourScore){ // Tie goes to player one
+        if(max.peek().equals(playerOneScore)){
             return 1;
         }
         return 0;
@@ -60,7 +65,7 @@ public class FourPlayerGame {
     private int playerSpins(int stop){
         int spin = Main.spinWheel(); // Spin the wheel
 
-        if (spin <= stop){
+        if (spin < stop){
             spin += Main.spinWheel();
         }
 

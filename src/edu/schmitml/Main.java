@@ -33,7 +33,7 @@ public class Main {
                 bestPercent = winPercentages.get(i);
                 bestStop = i;
             }
-            //System.out.println("Stop = " + i + ": " + winPercentages.get(i));
+            System.out.println( winPercentages.get(i));
         }
         System.out.println("Best stop " + bestStop +" with " + bestPercent + "\n");
     }
